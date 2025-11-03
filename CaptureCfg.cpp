@@ -1,6 +1,7 @@
 // CaptureCfg.cpp : implementation file
 //
 
+#include <limits>
 #include "stdafx.h"
 #include "WinDV.h"
 #include "CaptureCfg.h"
@@ -42,7 +43,7 @@ void CCaptureCfg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EVERY_NTH, m_everyNth);
 	DDV_MinMaxUInt(pDX, m_everyNth, 1, 1000000);
 	DDX_Text(pDX, IDC_MAX_FRAMES, m_maxAVIFrames);
-	DDV_MinMaxUInt(pDX, m_maxAVIFrames, 10, 1000000);
+	DDV_MinMaxUInt(pDX, m_maxAVIFrames, 10, std::numeric_limits<UINT>::max());
 	DDX_Radio(pDX, IDC_TYPE_1, m_type12);
 	DDX_CBString(pDX, IDC_DTFORMAT, m_dtformat);
 	DDX_CBIndex(pDX, IDC_NDIGITS, m_ndigits);

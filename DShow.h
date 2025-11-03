@@ -203,9 +203,9 @@ class CDV:public CStatic, CFrameHandler  {
 public:
 	enum {Idle, RecordPaused, Recording, CapturePaused, Capturing, Finished} m_state;
 	bool m_type2AVI;
-	int m_discontinuityTreshold;
-	int m_maxAVIFrames;
-	int m_everyNth;
+	UINT m_discontinuityTreshold;
+	UINT m_maxAVIFrames;
+	UINT m_everyNth;
 	bool m_recordPreview;
 	bool m_DVctrl;
 
